@@ -1,0 +1,24 @@
+.photo-wrap {
+  margin: 15px;
+  width: 540px;
+  height: 470px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.photo-title span {
+  background-color:rgb(231,231,231);
+  display: block;
+  padding: 7px 15px;
+  font-family: 'KyoboHand';
+  font-size: 15px;
+}
+.photo-container .photo {
+  margin: 15px 15px 10px 15px;
+  width: 495px;
+}
+.photo-container .photo-desc {
+  font-family: 'KyoboHand';
+  font-size: 15px;
+  margin: 0px 15px;
+  margin-bottom: 50px;
+}
