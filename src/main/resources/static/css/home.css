@@ -43,6 +43,12 @@
   margin-right: 5px;
 }
 
+.middle-box .miniroom{
+  overflow-y: scroll;
+  margin: 15px;
+  height: 320px;
+}
+
 
 /* news 카테고리 */
 .updated-news-wrap .updated-news-right {

@@ -113,11 +113,6 @@
                   <br>맘으로.....우는 ㄴ ㅐㄱ ㅏ 좋ㄷ ㅏ.....
                 </div>
               </div>
-              <button class="diary-button" onclick="getTextFile()"><i class="fa-solid fa-lock"></i>요닝의 비밀일기 보기</button>
-              <div class="diary-box" id="secret-box">
-                <div class="diary-date">요닝의 비밀 일기</div>
-                <div class="diary-txt" id="secret-txt"></div>
-              </div>
             </div>                      
           </div>
         </div>
@@ -133,34 +128,5 @@
     </div>
   </div>
 
-
-  <script>
-    function getTextFile() {
-      // <input type="file" accept="text/plain" /> 과 같음
-      var input = document.createElement("input");
-      input.type = "file";
-      input.accept = "text/plain";
-      input.onchange = function (event) { // 파일 열기 버튼을 눌러서 파일이 추가되었을 때
-        processFile(event.target.files[0]);
-        // processFile이라는 함수가 실행되고,
-        // processFile 함수의 인자(file)로 파일을 넘겨줍니다.
-      };
-      input.click();
-    }
-
-
-    function processFile(file) {
-      var reader = new FileReader(); // 파일을 읽을 수 있는 reader를 만듦
-      reader.readAsText(file, "utf-8"); // 한글을 읽기 위함
-
-
-      reader.onload = function () { // reader가 파일을 읽으면
-        // text라는 id 를 가진 요소를 찾아
-        document.getElementById("secret-txt").innerText = reader.result;
-        // 해당 요소의 innerText , 즉 텍스트를 reader가 읽은 결과 텍스트로 대체
-        document.getElementById("secret-box").style.display="block"; // 텍스트를 불러온 뒤 display 하기
-      };
-    }
-  </script>
 </body>
 </html>
